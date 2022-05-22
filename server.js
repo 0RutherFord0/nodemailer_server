@@ -21,24 +21,10 @@ var transporter = nodemailer.createTransport({
 });
 
 var mailOptions = {
-  from: "jaideep@iconnectsolutions.com ",
+  from: "vishalg@iconnectsolutions.com",
   to: "adityat@iconnectsolutions.com",
   subject: "Hathway Project Presentation",
   text: "Hello Prashant, <br> <br> Kindly work on Hathway Project Presentation. Make a small PPT with workflow diagram",
-};
-
-exports.sendMail = function (mailOptions) {
-  return new Promise(function (resolve, reject) {
-    transporter.sendMail(mailOptions, (err, info) => {
-      if (err) {
-        console.log("error: ", err);
-        reject(err);
-      } else {
-        console.log(`Mail sent successfully!`);
-        resolve(info);
-      }
-    });
-  });
 };
 
 transporter.sendMail(mailOptions, function (error, info) {
@@ -46,5 +32,6 @@ transporter.sendMail(mailOptions, function (error, info) {
     console.log(error);
   } else {
     console.log("Email sent: " + info.response);
+    console.log("Mail Send Successfully");
   }
 });
