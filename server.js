@@ -15,16 +15,16 @@ var transporter = nodemailer.createTransport({
   port: 587,
   service: "smtp",
   auth: {
-    user: "execuliacompany@gmail.com",
-    pass: "xsmtpsib-ddcb1f0c42d7834a05255716a8f836f60530c4799305b5276c4242b8510b03b6-Lpcyn2fSNXWzxQbV",
+    user: "pradyuta@iconnectsolutions.com",
+    pass: "xsmtpsib-3af2176b4a47bc49f50c65d219fbba667b6f7bfb80e74c5ced2b1a5203e2c27d-J60fK2pBUnT9vQDb",
   },
 });
 
 var mailOptions = {
-  from: "vishalg@iconnectsolutions.com",
-  to: "adityat@iconnectsolutions.com",
+  from: "Vishal Gavankar <vishalg@iconnectsolutions.com>",
+  to: "prathmeshk@iconnectsolutions.com",
   subject: "Hathway Project Presentation",
-  text: "Hello Prashant, <br> <br> Kindly work on Hathway Project Presentation. Make a small PPT with workflow diagram",
+  text: "Tomorrow your leave is cancel",
 };
 
 transporter.sendMail(mailOptions, function (error, info) {
